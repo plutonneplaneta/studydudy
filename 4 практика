@@ -3,6 +3,9 @@ n = random.randint(4,31)
 print("Число камней в куче: ",n)
 while n > 0:
     us = int(input("Сколько камней возьмём?"))
+    if us <= 0 or us > 3:
+        print("Вы можете взять от 3 до 4 камней")
+        exit()
     n -= us
     print("Камней в куче: ",n)
     if n == 1:
